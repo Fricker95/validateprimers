@@ -159,8 +159,8 @@ class cDNA(Transcript):
 		return cDNA(variant)
 
 	def pcr(self, primers: dict):
-		print(f"fwd primer: {primers[0]}, length={len(primers[0])}")
-		print(f"rev primer: {primers[1]}, length={len(primers[0])}")
+		print(f"fwd primer: 5'-{primers[0]}-3', length={len(primers[0])}")
+		print(f"rev primer: 5'-{primers[1]}-3', length={len(primers[0])}")
 		for fwd, rev in self.find_all_primer_locations(primers):
 			if fwd is None:
 				print(f"Failed fwd: {fwd}")
