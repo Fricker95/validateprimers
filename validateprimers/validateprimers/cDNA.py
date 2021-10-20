@@ -179,14 +179,6 @@ class cDNA(Transcript):
 				amplicon = cDNA(''.join(self[rev[0]: fwd[1]]))
 			print(f"amplicon: {amplicon}, length={len(amplicon)}")
 
-	# def pcr(self, tag: str, primers: dict)
-		# primer = next(self.find_all_primer_locations(tag, primers))
-
-		# if len(primer[0]) > 0 and len(primer[0]) > 0:
-		# 	begin_index = primer[0][0][0]
-		# 	end_index = primer[0][0][1]
-		# 	return cDNA(''.join(self[begin_index : end_index]))
-
-		return cDNA("")
+			yield amplicon
 
 
