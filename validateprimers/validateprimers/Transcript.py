@@ -55,28 +55,3 @@ class Transcript(str):
 			yield (fwd, rev)
 
 
-
-
-
-
-
-
-	# def find_all_primer_locations(self, tag, primers):
-		# result = {
-		# 	"tag": tag,
-		# 	"fwd": [i.span() for i in re.finditer(primers[0], self) if i],
-		# 	"rev": [i.span() for i in re.finditer(primers[1].reverse_complement(), self) if i],
-		# 	"len": 0,
-		# 	"notes": ""
-		# }
-		
-		# if len(result["rev"]) & len(result["fwd"]):
-		# 	if result["fwd"][0][0] > result["rev"][0][1]:
-		# 		result["len"] = result["fwd"][0][0] - result["rev"][0][1]
-		# 		result["notes"] = f"inverted: fwd > rev"
-		# 	else:
-		# 		result["len"] = result["rev"][0][1] - result["fwd"][0][0]
-
-		# yield result
-
-
