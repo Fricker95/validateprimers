@@ -17,11 +17,14 @@ from ncbi.datasets.openapi 				import ApiException as DatasetsApiException
 from ncbi.datasets.openapi.api.gene_api import GeneApi as DatasetsGeneApi
 from ncbi.datasets.openapi.models 		import V1GeneMatch
 
+from pymed 								import PubMed
+
 class NCBIDataReport(object):
 	"""docstring for NCBIDataReport"""
 	def __init__(self, taxon: str = "human"):
 		super(NCBIDataReport, self).__init__()
 		self.taxon = taxon
+		self.pubmed = PubMed()
 		
 	def open(self, filename):
 		"""Open file"""
@@ -75,5 +78,12 @@ class NCBIDataReport(object):
 			# 	print(f'{exon["begin"]}, {exon["end"]}; {exon["order"]}')
 
 
+	def query(self, search_str: str = "", max_results = 1):
+		return (i.toDict() for i in self.pubmed.query(search_str, max_results = max_results))
+
+
+
+bejsi9-cegwaQ-vizdym
+928f792b2e
 
 
